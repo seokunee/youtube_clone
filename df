@@ -1,0 +1,71 @@
+[33mcommit faca13abad12786ec0a0ffe5517bfa83a6f99529[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: kunee <67690205+seokunee@users.noreply.github.com>
+Date:   Thu May 27 23:07:30 2021 +0900
+
+    Update README.md
+
+[33mcommit 137e735ee189e04460b01dc0d5b9cea623651ecd[m
+Author: kunee <67690205+seokunee@users.noreply.github.com>
+Date:   Thu May 27 23:06:59 2021 +0900
+
+    Update README.md
+
+[33mcommit da1a00ec7aa86d6aff8f832361a2b9259f8c8a69[m
+Author: kunee <67690205+seokunee@users.noreply.github.com>
+Date:   Thu May 27 23:06:39 2021 +0900
+
+    Update README.md
+
+[33mcommit 639b7295ef212f53769d2e51187a3d1f58338623[m
+Author: kunee <67690205+seokunee@users.noreply.github.com>
+Date:   Thu May 27 23:06:20 2021 +0900
+
+    Update README.md
+
+[33mcommit 1d64a23527bbdeb615eb893bcd261c8910006411[m
+Author: kunee <67690205+seokunee@users.noreply.github.com>
+Date:   Thu May 27 23:06:00 2021 +0900
+
+    Update README.md
+
+[33mcommit c16ac2718763472bfc941b12ade05df648b7d35c[m
+Author: kunee <67690205+seokunee@users.noreply.github.com>
+Date:   Thu May 27 23:02:47 2021 +0900
+
+    Update README.md
+
+[33mcommit 4273e346d408de88366d5e9f4a0e914a8b2170df[m
+Author: kunee <67690205+seokunee@users.noreply.github.com>
+Date:   Thu May 27 23:00:39 2021 +0900
+
+    Update README.md
+
+[33mcommit 2226251cce16bf72a68ee477bcd0f5535e8cb77a[m
+Author: seokhun <xocoolree@gmail.com>
+Date:   Thu May 27 22:58:52 2021 +0900
+
+    search and update list
+
+[33mcommit 609a8109e3b901ab1d01f5c4d9052c68dbdd5642[m
+Author: seokhun <xocoolree@gmail.com>
+Date:   Tue May 25 08:00:35 2021 +0900
+
+    add list css more pretty
+
+[33mcommit 348fcf12efa4bbc9bbc50a305b21203db4f866a4[m
+Author: seokhun <xocoolree@gmail.com>
+Date:   Thu May 20 20:45:55 2021 +0900
+
+    show video list with title
+
+[33mcommit 52d067919fcedddc9c21225a60227fcd4ce9f17e[m
+Author: seokhun <xocoolree@gmail.com>
+Date:   Sun May 9 04:59:31 2021 +0900
+
+    init project
+
+[33mcommit c26c27d01b349046e8f2c1ba7d295cb8b64f237f[m
+Author: seokhun <xocoolree@gmail.com>
+Date:   Wed Apr 21 01:38:41 2021 +0900
+
+    Initialize project using Create React App

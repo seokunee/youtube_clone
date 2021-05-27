@@ -1,0 +1,26 @@
+.player_display_none {
+  display: none;
+}
+
+.player_display {
+  /* background-color: blueviolet; */
+}
+.title {
+  display: block;
+  /* border: 1px black solid; */
+  font-size: 2em;
+  font-weight: 700;
+  padding: 0.3em;
+}
+.channelTitle {
+  display: block;
+  font-size: 1.3em;
+  font-weight: 700;
+  padding: 0.5em;
+}
+
+.description {
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 0.5em;
+}

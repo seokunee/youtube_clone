@@ -1,0 +1,23 @@
+.app {
+  width: 75%;
+  margin: auto;
+}
+
+.list__container {
+  display: flex;
+  /* background-color: lightcoral; */
+}
+
+.player {
+  flex: 1 1 70%;
+}
+
+.videos {
+  flex: 1 1 30%;
+}
+
+@media (max-width: 1050px) {
+  .list__container {
+    flex-direction: column;
+  }
+}
