@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef, memo } from "react";
 import styles from "./video_item.module.css";
 
-const VideoItem = (props) => {
+const VideoItem = memo((props) => {
   const title = props.video.snippet.title;
   const itemRef = useRef();
 
@@ -25,16 +25,19 @@ const VideoItem = (props) => {
           className={styles.item__thumbnail}
         />
         <div className={styles.item__title}>
-          <p className={styles.main__title}>
-            {title.length > 40 ? title.slice(0, 40) + "..." : title}
-          </p>
-          <p className={styles.channel__title}>
-            {props.video.snippet.channelTitle}
-          </p>
+          <div className={styles.item__channel_image}></div>
+          <div>
+            <p className={styles.main__title}>
+              {title.length > 40 ? title.slice(0, 40) + "..." : title}
+            </p>
+            <p className={styles.channel__title}>
+              {props.video.snippet.channelTitle}
+            </p>
+          </div>
         </div>
       </div>
     </li>
   );
-};
+});
 
 export default VideoItem;

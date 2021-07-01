@@ -1,11 +1,15 @@
-.app {
-  width: 75%;
-  margin: auto;
+:root {
+  --main-backgoround-color: rgb(243, 243, 243);
 }
 
-.list__container {
+.app {
+  width: 100%;
+  margin: auto;
+  background-color: var(--main-backgoround-color);
+}
+
+.container {
   display: flex;
-  /* background-color: lightcoral; */
 }
 
 .player {
@@ -17,7 +21,9 @@
 }
 
 @media (max-width: 1050px) {
-  .list__container {
+  .container {
     flex-direction: column;
   }
 }
+
+

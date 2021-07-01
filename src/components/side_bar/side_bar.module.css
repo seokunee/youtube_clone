@@ -1,0 +1,32 @@
+:root {
+  --side-bar-color: white;
+}
+
+.side_bar {
+  display: flex;
+  flex-direction: column;
+  width: 5rem;
+  height:100vh;
+  background-color: var(--side-bar-color);
+  position: fixed;
+  animation: slidein 1s;
+}
+
+
+.side_bar__icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+@keyframes slidein {
+  from {
+    left: -100%;
+  }to{
+    left: 0;
+  }
+}
+

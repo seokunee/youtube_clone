@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, memo } from "react";
 import styles from "./search.module.css";
 
-const Search = (props) => {
+const Search = memo((props) => {
   const inputRef = useRef();
+
   const searchItems = (e) => {
     e.preventDefault();
     props.updateList(inputRef.current.value);
@@ -16,6 +17,9 @@ const Search = (props) => {
 
   return (
     <header>
+      <div className={styles.menu__icon}>
+        <i class="fas fa-align-justify"></i>
+      </div>
       <button
         className={styles.youtube}
         onClick={() => {
@@ -38,22 +42,11 @@ const Search = (props) => {
           <i className="fas fa-search"></i>
         </button>
       </form>
-      <div className={styles.option__btn}>
-        <div className={styles.option__icon}>
-          <i className="fas fa-microphone"></i>
-        </div>
-        <div className={styles.option__icon}>
-          <i className="fas fa-th"></i>
-        </div>
-        <div className={styles.option__icon}>
-          <i className="fas fa-bell"></i>
-        </div>
-        <div className={styles.option__icon}>
-          <i className="fas fa-user-circle"></i>
-        </div>
+      <div className={styles.option__icon}>
+        <i className="fas fa-user-circle"></i>
       </div>
     </header>
   );
-};
+});
 
 export default Search;
