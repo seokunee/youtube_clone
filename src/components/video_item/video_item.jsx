@@ -1,39 +1,43 @@
-import React, { useRef, memo } from "react";
+import React, { memo } from "react";
 import styles from "./video_item.module.css";
 
-const VideoItem = memo((props) => {
-  const title = props.video.snippet.title;
-  const itemRef = useRef();
+const VideoItem = memo(({video, setVideo, setPlayer, playerStatus }) => {
+  const title = video.snippet.title;
+  const containerType = playerStatus === "off" ? styles.container__off : styles.container__on;
+  const itemType = playerStatus === "off" ? styles.item__off : styles.item__on;
+  const thumbnailType = playerStatus === "off" ? styles.item__thumbnail__off : styles.item__thumbnail__on;
+  const itemTitleType = playerStatus === "off" ? styles.item__title__off : styles.item__title__on;
+  
 
-  const updateVideo = (e) => {
-    props.setVideo(props.video);
+
+  const updateVideo = () => {
+    setVideo(video);
   };
-
+  const onPlayer = ()=>{
+    setPlayer("on");
+  }
   return (
     <li
-      ref={itemRef}
-      className={styles.container}
+      className={containerType}
       onClick={() => {
         updateVideo();
         window.scrollTo(0, 0);
+        onPlayer();
       }}
     >
-      <div className={styles.item}>
+      <div className={itemType}>
         <img
-          src={props.video.snippet.thumbnails.medium.url}
+          src={video.snippet.thumbnails.medium.url}
           alt="thumbnail"
-          className={styles.item__thumbnail}
+          className={thumbnailType}
         />
-        <div className={styles.item__title}>
-          <div className={styles.item__channel_image}></div>
-          <div>
+        <div className={itemTitleType}>
             <p className={styles.main__title}>
               {title.length > 40 ? title.slice(0, 40) + "..." : title}
             </p>
             <p className={styles.channel__title}>
-              {props.video.snippet.channelTitle}
+              {video.snippet.channelTitle}
             </p>
-          </div>
         </div>
       </div>
     </li>

@@ -93,3 +93,11 @@ input:focus {
 .input__display {
   display: none;
 }
+
+
+@media (max-width: 30rem) {
+  .menu__icon,
+  .youtube__title {
+    display: none;
+  }
+}

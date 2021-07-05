@@ -9,17 +9,22 @@ const Player = (props) => {
         type="text/html"
         title="youtube video player"
         width="100%"
-        height="360"
+        height="520"
         src={`http://www.youtube.com/embed/${props.video.id}?enablejsapi=1&origin=http://example.com`}
         frameBorder="0"
         allowFullScreen
       ></iframe>
       <span className={styles.title}>{props.video.snippet.title}</span>
-      <span className={styles.channelTitle}>
-        {props.video.snippet.channelTitle}
-      </span>
-      <p className={styles.description}>{props.video.snippet.description}</p>
-    </div>
+        <div className={styles.container}>
+          <span className={styles.channelTitle}>
+            {props.video.snippet.channelTitle}
+          </span>
+          <div className={styles.subscribe}>
+            구독
+          </div>
+        </div>
+          <p className={styles.description}>{props.video.snippet.description}</p>
+      </div>
   );
 };
 

@@ -1,14 +1,28 @@
-.video__list {
-  padding: 20px 0 0 5rem;
+.video__list__off {
+  padding: 1rem 0 0 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   list-style: none;
 }
 
-@media (max-width: 767px) {
-  .video__list {
-    flex-direction: column;
-    align-items: center;
+.video__list__on {
+  padding: 1rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+@media (min-width: 30rem) and (max-width: 65rem) {
+  .video__list__on {
+    justify-content: flex-start;
+    padding-left:1rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .video__list__off {
+    padding: 20px 0 0 0;
   }
 }

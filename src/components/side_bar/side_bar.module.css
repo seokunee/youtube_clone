@@ -22,6 +22,12 @@
   cursor: pointer;
 }
 
+@media (max-width: 31rem){
+  .side_bar{
+    display:none;
+  }
+}
+
 @keyframes slidein {
   from {
     left: -100%;

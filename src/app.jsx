@@ -10,7 +10,7 @@ const App = ({ youtube }) => {
   const [watchVideo, setVideo] = useState({
     snippet: { title: "", channelTitle: "", description: "" },
   });
-  
+  const [playerStatus, setPlayerStatus] = useState("off");
 
   const updateList = useCallback(
     (query) => {
@@ -38,22 +38,29 @@ const App = ({ youtube }) => {
       .initUpdate() //
       .then((items) => setVideos(items));
   }, [youtube]);
+  
   return (
     <div className={styles.app}>
       <Search
         updateList={updateList}
         initYoutube={initYoutube}
         resetVideos={resetVideos}
+        setPlayer={setPlayerStatus}
       />
       <div className={styles.container}>
-        <SideBar />
+        {playerStatus ==="off" ? <SideBar />: null}
         {watchVideo.snippet.title !== "" && (
           <div className={styles.player}>
             <Player video={watchVideo} />
           </div>
         )}
         <div className={styles.videos}>
-          <VideoList videos={videos} setVideo={setVideo} />
+          <VideoList  
+           videos={videos}
+           setVideo={setVideo} 
+           setPlayer={setPlayerStatus}
+           playerStatus={playerStatus}
+          />
         </div>
       </div>
     </div>

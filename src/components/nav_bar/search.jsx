@@ -1,30 +1,37 @@
 import React, { useRef, memo } from "react";
 import styles from "./search.module.css";
 
-const Search = memo((props) => {
+const Search = memo(({updateList, initYoutube, resetVideos, setPlayer}) => {
   const inputRef = useRef();
 
   const searchItems = (e) => {
     e.preventDefault();
-    props.updateList(inputRef.current.value);
-    inputRef.current.value = "";
+    if(inputRef.current.value != ""){
+      updateList(inputRef.current.value);
+      inputRef.current.value = "";
+    }
   };
 
   const submit = (e) => {
     searchItems(e);
-    props.initYoutube();
+    initYoutube();
   };
+
+  const offPlayer = ()=>{
+    setPlayer("off");
+  }
 
   return (
     <header>
       <div className={styles.menu__icon}>
-        <i class="fas fa-align-justify"></i>
+        <i className="fas fa-align-justify"></i>
       </div>
       <button
         className={styles.youtube}
         onClick={() => {
-          props.initYoutube();
-          props.resetVideos();
+          initYoutube();
+          resetVideos();
+          offPlayer();
         }}
       >
         <i className="fab fa-youtube"></i>

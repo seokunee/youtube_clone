@@ -13,7 +13,7 @@ const SideBar = (props) => {
     <ul className={styles.side_bar}>
       {sideBarData.map((icon) => {
         return (
-          <li className={styles.side_bar__icon}>
+          <li key ={icon[0]} className={styles.side_bar__icon}>
             <i className={`fas fa-${icon[0]}`}></i>
             <span className={styles.icon_info}>{icon[1]}</span>
           </li>
