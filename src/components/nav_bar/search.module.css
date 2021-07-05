@@ -97,7 +97,9 @@ input:focus {
 
 @media (max-width: 30rem) {
   .menu__icon,
-  .youtube__title {
+  .youtube__title,
+  .option__icon {
     display: none;
   }
+  
 }
