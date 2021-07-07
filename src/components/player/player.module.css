@@ -13,8 +13,12 @@
   font-size: 1.2em;
   font-weight: 500;
   margin-top: 1rem;
-  padding: 0.3rem 0.3rem 2rem 0.3rem;
+  padding: 1rem 0.3rem 2rem 1rem;
   border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+frame{
+  height: 60vw;
 }
 
 .container {
@@ -41,8 +45,7 @@
 
 .description {
   font-size: 1rem;
-  padding: 1em;
-  padding-bottom: 2rem;
+  padding: 1rem 1rem 2rem 1rem;
   border-bottom: 1px solid rgb(211, 211, 211);
 }
 
@@ -58,8 +61,8 @@
 }
 
 @media (max-width: 30rem) {
-  iframe{
-    width: 90vw;
+  .title{
+    font-size: 1rem;
   }
 }
 

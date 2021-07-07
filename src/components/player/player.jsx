@@ -10,7 +10,7 @@ const Player = (props) => {
         title="youtube video player"
         width="100%"
         height="520"
-        src={`http://www.youtube.com/embed/${props.video.id}?enablejsapi=1&origin=https://example.com`}
+        src={`https://www.youtube.com/embed/${props.video.id}?enablejsapi=1&origin=https://example.com`}
         frameBorder="0"
         allowFullScreen
       ></iframe>

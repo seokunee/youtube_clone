@@ -4,21 +4,22 @@ import styles from "./search.module.css";
 const Search = memo(({updateList, initYoutube, resetVideos, setPlayer}) => {
   const inputRef = useRef();
 
-  const searchItems = (e) => {
-    e.preventDefault();
-    if(inputRef.current.value != ""){
-      updateList(inputRef.current.value);
-      inputRef.current.value = "";
-    }
+  const searchItems = () => {
+    updateList(inputRef.current.value);
+    inputRef.current.value = "";
   };
 
   const submit = (e) => {
-    searchItems(e);
-    initYoutube();
+    e.preventDefault();
+    if(inputRef.current.value != ""){
+      searchItems(e);
+      initYoutube();
+      offPlayer();
+    }
   };
 
   const offPlayer = ()=>{
-    setPlayer("off");
+      setPlayer("off"); 
   }
 
   return (

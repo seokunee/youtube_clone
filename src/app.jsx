@@ -55,7 +55,7 @@ const App = ({ youtube }) => {
           </div>
         )}
         <div className={styles.videos}>
-          <VideoList  
+          <VideoList
            videos={videos}
            setVideo={setVideo} 
            setPlayer={setPlayerStatus}
